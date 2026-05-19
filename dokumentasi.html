@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dokumentasi Gambar - PPG Prajabatan 2026</title>
+  <meta name="description" content="Dokumentasi foto kegiatan pembelajaran dan praktik mengajar PPG Prajabatan 2026." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=5" />
+  <link rel="icon" type="image/png" href="Logo_UMS_Surakarta.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+    }
+    
+    .dokumentasi-container {
+      padding: 2rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    
+    .dokumentasi-header {
+      text-align: center;
+      color: white;
+      margin-bottom: 3rem;
+      padding: 2rem;
+      background: rgba(255,255,255,0.1);
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+    }
+    
+    .dokumentasi-header h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 3rem;
+      font-weight: 800;
+      margin: 0 0 1rem 0;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+    
+    .dokumentasi-header p {
+      font-size: 1.2rem;
+      margin: 0;
+      opacity: 0.9;
+    }
+    
+    .dokumentasi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+    
+    .dokumentasi-item {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .dokumentasi-item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 30px 60px rgba(0,0,0,0.2);
+    }
+    
+    .dokumentasi-header-item {
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+    
+    .dokumentasi-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin: 0 0 0.5rem 0;
+    }
+    
+    .dokumentasi-badge {
+      background: rgba(255,255,255,0.2);
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 25px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      display: inline-block;
+    }
+    
+    .dokumentasi-photo {
+      position: relative;
+      width: 100%;
+      height: 450px;
+      overflow: hidden;
+    }
+    
+    .dokumentasi-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      transition: transform 0.3s ease;
+    }
+    
+    .dokumentasi-item:hover .dokumentasi-photo img {
+      transform: scale(1.05);
+    }
+    
+    .dokumentasi-info {
+      padding: 2rem;
+    }
+    
+    .dokumentasi-info h4 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #333;
+      margin: 0 0 1rem 0;
+    }
+    
+    .dokumentasi-info p {
+      color: #666;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+    
+    .dokumentasi-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    
+    .dokumentasi-tags .tag {
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: white;
+      padding: 0.3rem 0.8rem;
+      border-radius: 15px;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+    
+    .back-button {
+      position: fixed;
+      top: 2rem;
+      left: 2rem;
+      background: white;
+      color: #667eea;
+      padding: 1rem 1.5rem;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: 600;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+      z-index: 1000;
+    }
+    
+    .back-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    }
+    
+    .back-button i {
+      margin-right: 0.5rem;
+    }
+    
+    @media (max-width: 768px) {
+      .dokumentasi-container {
+        padding: 1rem;
+      }
+      
+      .dokumentasi-header h1 {
+        font-size: 2rem;
+      }
+      
+      .dokumentasi-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+      
+      .dokumentasi-photo {
+        height: 350px;
+      }
+      
+      .back-button {
+        top: 1rem;
+        left: 1rem;
+        padding: 0.8rem 1.2rem;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="index.html" class="back-button">
+    <i class="fas fa-arrow-left"></i>
+    Kembali ke Beranda
+  </a>
+
+  <div class="dokumentasi-container">
+    <div class="dokumentasi-header">
+      <h1>Dokumentasi Gambar</h1>
+      <p>Kumpulan foto dokumentasi kegiatan pembelajaran, praktik mengajar, dan kegiatan PPG siklus 1, 2, dan 3</p>
+    </div>
+
+    <div class="dokumentasi-grid">
+      <!-- Siklus 1 -->
+      <div class="dokumentasi-item">
+        <div class="dokumentasi-header-item">
+          <h3 class="dokumentasi-title">Siklus 1</h3>
+          <div class="dokumentasi-badge">Pertemuan 1-3</div>
+        </div>
+        <div class="dokumentasi-photo">
+          <img src="dokumentasi-siklus-1.jpeg" alt="Dokumentasi Siklus 1" />
+        </div>
+        <div class="dokumentasi-info">
+          <h4>Kegiatan Pembelajaran Siklus 1</h4>
+          <p>Dokumentasi praktik mengajar pada pertemuan pertama hingga ketiga dengan fokus pada gerak dasar kombinasi lari dan lempar, serta praktik kebersihan diri dan lingkungan.</p>
+          <div class="dokumentasi-tags">
+            <span class="tag">Gerak Dasar</span>
+            <span class="tag">Kebersihan</span>
+            <span class="tag">Siklus 1</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Siklus 2 -->
+      <div class="dokumentasi-item">
+        <div class="dokumentasi-header-item">
+          <h3 class="dokumentasi-title">Siklus 2</h3>
+          <div class="dokumentasi-badge">Pertemuan 4-6</div>
+        </div>
+        <div class="dokumentasi-photo">
+          <img src="dokumentasi-siklus-2.jpeg" alt="Dokumentasi Siklus 2" />
+        </div>
+        <div class="dokumentasi-info">
+          <h4>Kegiatan Pembelajaran Siklus 2</h4>
+          <p>Dokumentasi praktik mengajar pada pertemuan keempat hingga keenam dengan penekanan pada koordinasi gerak dan evaluasi pembelajaran berbasis permainan.</p>
+          <div class="dokumentasi-tags">
+            <span class="tag">Koordinasi</span>
+            <span class="tag">Evaluasi</span>
+            <span class="tag">Siklus 2</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Siklus 3 -->
+      <div class="dokumentasi-item">
+        <div class="dokumentasi-header-item">
+          <h3 class="dokumentasi-title">Siklus 3</h3>
+          <div class="dokumentasi-badge">Pertemuan 7-9</div>
+        </div>
+        <div class="dokumentasi-photo">
+          <img src="dokumentasi-siklus-3.jpeg" alt="Dokumentasi Siklus 3" />
+        </div>
+        <div class="dokumentasi-info">
+          <h4>Kegiatan Pembelajaran Siklus 3</h4>
+          <p>Dokumentasi praktik mengajar pada pertemuan ketujuh hingga kesembilan dengan fokus pada refleksi pembelajaran dan peningkatan kualitas mengajar.</p>
+          <div class="dokumentasi-tags">
+            <span class="tag">Refleksi</span>
+            <span class="tag">Peningkatan</span>
+            <span class="tag">Siklus 3</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
